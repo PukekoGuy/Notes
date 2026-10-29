@@ -2,16 +2,51 @@
 \input{preamble.tex}
 \newcommand{\Bl}{\operatorname{Bl}}
 
-\title{Notes}
+\title{Cohomology of products and blow-ups of projective space}
 
 \author{George}
 \begin{document}
 \maketitle
 
-Throughout this document all varieties are considered over the complex numbers.
+Throughout this note all varieties are considered over the complex numbers.\\
+
+We have shown that: 
+\begin{align}
+    &H^*(\Bl_p \P^2) = \Z[h, e]/(he,h^3,h^2+e^2), &|h|=|e|=2, \\
+    &H^*(\P^1 \times \P^1) = \Z[\alpha,\beta]/(\alpha^2,\beta^2), &|\alpha|=|\beta|=2
+\end{align}
+ The universal coefficient theorem states that for any space $X$ and any (commutative) ring $R$, there is a short exact sequence,
+
+
+    \begin{equation}
+        0 \to \Ext(H_{n-1}(X),R) \to H^n(X;R) \to \Hom(H_n(X),R) \to 0.
+    \end{equation}
+
+Since both $H_*(\Bl_p \P^2)$ and $H_*(\P^1 \times \P^1)$ are finite rank free $\Z$-modules, 
+\begin{equation}
+    \Ext(H_{n-1}(X),R) = 0,\quad \Hom(H_n(X),R) \cong R \otimes H_n(X)
+\end{equation}
+
+Therefore there are isomorphisms $H^n(X;R) \to R \otimes H_n(X)$, natural in $R$. These induce an isomorphism $R \otimes H^*(X) \to H^*(X;R)$ for $X = \Bl_p \P^2$ or $\P^1 \times \P^1$, compatible with the cup product. I feel like you probably believe me already or don't care, so I'm not going to explain the word ``induce'' in the last sentence.
 
 \begin{theorem}
-    The cohomology rings $H(\Bl_p \P^2)$
+    If $R$ is a commutative ring then there is an isomoprhism of graded rings from $H^*(\Bl_p \P^2; R)$ to $H^*(\P^1 \times \P^1; R)$ if and only if $2 \in R^\times$.
 \end{theorem}
-
+\begin{proof}
+    Let $\phi$ be an isomorphism of graded rings $H^*(\Bl_p \P^2; R) \to H^*(\P^1 \times \P^1; R)$. Since $H^4(\Bl_p \P^2; R) = R\cdot h^2$ and $H^4(\P^1 \times \P^1; R) = R\cdot \alpha \beta$, $\phi(h^2) = u\alpha \beta$ for some $u \in R^\times$. Now, any element $x \in H^2(\P^1 \times \P^1;R)$ can be written $x=m\alpha + n\beta$ for some $m,n\in R$, and $(m\alpha + n\beta)^2 = 2mn\alpha\beta$. But then $\phi(h)^2 = 2k\alpha\beta$ for some $k \in R$, which implies that $2k=u\in R^\times$, and this implies $2 \in R^\times$.\\
+    
+    Now suppose that $2 \in R^\times$. We define the map $\phi$ on the basis $1,h,e,h^2$ by
+    \begin{equation}
+        (1,h,e,h^2) \mapsto (1,\alpha+\beta,\alpha-\beta,2\alpha\beta).
+    \end{equation}
+    It is clear that since $2 \in R^\times$, $\phi$ is a graded linear isomorphism, so the only question is whether it is a ring homomorphism. Zeroethly, $\phi(1)=1$. Secondly,
+    \begin{align}
+        \phi(h)\phi(e)=(\alpha+\beta)(\alpha-\beta)=\alpha^2-\beta^2=0=\phi(he) \\
+        \phi(h)^2 = (\alpha+\beta)^2 = 2\alpha\beta = \phi(h^2)\\
+        \phi(e)^2 = (\alpha - \beta)^2 = -2\alpha\beta = \phi(-h^2) = \phi(e^2)\\
+        \phi(h)^3= (\alpha + \beta)^3 = \alpha^3 + 3\alpha^2\beta + 3\alpha\beta^2 + \beta^3 = 0 = \phi(h^3).
+    \end{align}
+    Therefore $\phi$ is a ring homomorphism, so the theorem is proved.
+    
+\end{proof}
 \end{document}
