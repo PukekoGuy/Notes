@@ -1,0 +1,213 @@
+\documentclass{amsart}
+\usepackage{mathrsfs}
+\usepackage{quiver}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+
+
+
+
+% \numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\cB}{\mathcal{B}}
+
+\title{Notes}
+
+\author{George}
+\begin{document}
+\maketitle
+
+\begin{theorem}
+    If $X$ is a topological space and $\cU = \{U_\lambda \}_{\lambda \in \Lambda}$ then there is a bijection
+    \begin{equation}
+        \left\{
+            \begin{gathered}
+            \textnormal{Locally free sheaves on } X\\
+            \textnormal{trivialised over } \cU
+            \end{gathered}
+        \right\}/\cong \quad\longleftrightarrow\quad \check H {(\cU, \GL_n(\cO_X))}
+    \end{equation}
+
+\end{theorem}
+
+\begin{proof}
+    Let us call the $\rightarrow$ direction $\alpha$ and the $\leftarrow$ direction $\beta$. We first construct $\alpha$ Let $\sF$ be a locally free sheaf on $X$ of rank $n$. Then for each $\lambda \in \Lambda$ there exists an ``trivialisation'' isomorphism of sheaves $\phi_\lambda: \cO_U^{\oplus n} \to \sF|_{U_\lambda}$. Let $U_{\lambda \mu} = U_\lambda \cap U_\mu$. Since $\phi_\lambda$ is a morphism of sheaves, there is a restriction $\phi_{\lambda}|_{U_{\lambda,\mu}}: \cO_U^{\oplus n}(U_{\lambda\mu}) \to \sF|_{U_{\lambda}}(U_{\lambda\mu})$. We can also restrict $\phi_\mu$ and the source and target can be rewritten as in the following diagram, 
+    % https://q.uiver.app/#q=WzAsMixbMCwwLCJcXGNPX1hee1xcb3BsdXMgbn0oVV97XFxsYW1iZGEsXFxtdX0pIl0sWzIsMCwiXFxzRihVX3tcXG11LFxcbGFtYmRhfSkiXSxbMCwxLCJcXHBoaV97XFxtdX18X3tVX3tcXGxhbWJkYSxcXG11fX0iLDAseyJjdXJ2ZSI6Mn1dLFswLDEsIlxccGhpX3tcXGxhbWJkYX18X3tVX3tcXGxhbWJkYSxcXG11fX0iLDAseyJjdXJ2ZSI6LTJ9XV0=
+\[\begin{tikzcd}
+	{\cO_X^{\oplus n}(U_{\lambda,\mu})} && {\sF(U_{\mu,\lambda})}
+	\arrow["{\phi_{\mu}|_{U_{\lambda,\mu}}}", curve={height=12pt}, from=1-1, to=1-3]
+	\arrow["{\phi_{\lambda}|_{U_{\lambda,\mu}}}", curve={height=-12pt}, from=1-1, to=1-3]
+\end{tikzcd}\]
+\\
+Now we can define $T_{\lambda \mu} = \phi_{\lambda}|_{U_{\lambda,\mu}}^{-1} \circ \phi_{\mu}|_{U_{\lambda\mu}} \in \Aut(\cO_X^{\oplus n}(U_{\lambda\mu})) = \GL_n(\cO_X)(U_{\lambda\mu})$. We now verify that $(T_{\lambda\mu} )_{\lambda,\mu \in \Lambda}$ satisfy the cocycle condition. Restricting to $U_{\lambda \mu \nu}$, we have
+\begin{equation}
+    T_{ \nu \mu}T_{ \mu \lambda} = (\phi_\nu^{-1} \phi_\mu) (\phi_{\mu}^{-1} \phi_{\lambda}) = \phi_\nu^{-1}\phi_{\lambda} = T_{\nu \lambda}.
+\end{equation}
+Therefore $(T_{\lambda \mu})_{\lambda,\mu} \in \check Z(\cU, \GL_n(\cO_X))$.
+\\
+Now suppose that $\sF'$ is another locally free sheaf trivialised over $\cU$, with $\phi_\lambda'$ and $T_{\lambda \mu}$ defined analogously, and suppose $\psi$ is an isomorphism of sheaves $\sF \to \sF'$. Then for each $\lambda \in \Lambda$ we have an isomorphism of sheaves $\psi_\lambda: \sF|_{U_\lambda} \to \sF'|_{U_\lambda}$. Let $h_\lambda = (\phi'_\lambda)^{-1} \circ \psi_\lambda \circ \phi_\lambda$. Clearly $h_\lambda \in \Gamma(U_\lambda,\GL_n(\cO_X))$, so $(h_\lambda)_{\lambda \in \Lambda} \in \cB^0(\cU, \GL_n(\cO_X))$. Restricting to $U_{\lambda \mu}$, since $\psi$ is a morphism of sheaves, $\psi_\lambda = \psi_\mu$, so
+\begin{align}
+    h_\lambda T_{\lambda \mu} &= ((\phi_\lambda')^{-1} \psi_\lambda \phi_\lambda) (\phi_\lambda^{-1} \phi|_\mu) \\
+    &= (\phi_\lambda')^{-1} \psi_\lambda \phi_\mu = (\phi|_\lambda')^{-1} \psi|_\mu \phi_\mu \\
+    &= (\phi_\lambda')^{-1} (\phi_\mu' (\phi|_\mu')^{-1}) \psi|_\mu \phi_\mu \\
+    &= T_{\lambda \mu}' h_{\mu}.
+\end{align}
+\end{proof}
+Therefore $(T_{\lambda\mu})$ and $(T_{\lambda\mu}')$ are in the same class of $\check H(\cU, \GL_n(\cO_X))$. Thus we have a well defined map $\alpha$. \\
+
+Suppose that there exists $(h_\lambda)_{\lambda \in \Lambda} \in \cB^0(\cU, \GL_n(\cO_X))$ such that for each $\lambda, \mu \in \Lambda$, $h_\lambda T_{\lambda \mu} = T_{\lambda \mu}' h_{\mu}$ on $U_{\lambda \mu}$. Then let $\psi_\lambda = \phi'_\lambda h_\lambda \phi_\lambda^{-1}$. Then on each overlap $U_{\lambda\mu}$, we have 
+\begin{align}
+    \psi_\lambda &= \phi'_\lambda h_\lambda \phi_\lambda^{-1} \\
+    &= \phi'_\lambda h_\lambda \phi_\lambda^{-1} (\phi_\mu \phi_\mu^{-1}) \\
+    &= \phi'_\lambda h_\lambda T_{\lambda\mu} \phi_\mu^{-1} \\
+    &= \phi'_\lambda T_{\lambda\mu}' h_\mu \phi_\mu^{-1} \\
+    &= \psi_\mu.
+\end{align}
+Therefore the $\psi_\lambda$ agree on intersections, so that induce a morphism sheaves, which is in fact an isomorphism because the same argument holds for $(h_\lambda^{-1})$. Thus $\alpha$ is injective. \\
+
+Now for the reverse direction, suppose we have a cocyle $(T_{\lambda\mu})_{\lambda,\mu \in \Lambda} \in \check Z(\cU, \GL_n(\cO_X))$. We first construct a sheaf $\sF$ such that $\sF(U_\lambda) = \cO_X^{\oplus n}(U_\lambda)$ for each $\lambda \in \Lambda$. For any open set $V$, we define
+\begin{equation}
+    \sF(V) = \left\{ (s_\lambda)_{\lambda \in \Lambda} \in \prod_{\lambda\in \Lambda} \cO_X^{\oplus n}(V \cap U_\lambda) \mid s_\lambda = T_{\lambda \mu} s_\mu \text{ on } V\cap U_\lambda \cap U_\mu\right\}.
+\end{equation}
+The restriction maps $\sF (V) \to \sF(W)$ for $V \subset W$ are induced by restricting $\cO_X(V \cap U_\lambda) \to \cO_X(W \cap U_\lambda)$ for each $\lambda$, and are obviously well defined, so $\sF$ is a presheaf. The separation and gluing axioms are satisfied fro $\sF$ as a direct consequence of the fact that they are satisfied for $\cO_X$, and a section of $\sF(V)$ is just a collection of sections of $\cO_X(V \cap U_\lambda)$. Thus $\sF$ is a sheaf. \\
+
+For any open $V$, to give a section of $\sF(V)$ it suffices to give a section $s_\lambda$ for some $\lambda \in \Lambda$ such that $V \subseteq U_\lambda$, since we can then define $s_\lambda = T_{\lambda \mu} s_\mu$ for each $\mu \in \Lambda$. It follows that the inclusion into the $\lambda$ component gives an isomorphism $\phi_\lambda: \cO_X^{\oplus n}(U_\lambda) \to \sF(U_\lambda)$ for each $\lambda \in \Lambda$. Naturally, $\phi_\lambda^{-1}$ is the projection onto the $\lambda$ component. Therefore the transition functions of $\sF$ are $\phi_{\mu}^{-1} \phi_{\lambda} = T_{\lambda \mu} $. Thus we have a well defined map $\beta$, and $\alpha \circ \beta = \Id$, which means that $\alpha$ is surjective. We already proved that $\alpha$ is injective, so this completes the proof of the bijection.
+
+
+\end{document}
